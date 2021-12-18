@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainstyles.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <%- include ('partials/navbar') %>
+    <div class="container">
+
+        <% for( let i=0; i < userDetails.length; i++ ) { %>
+
+            <div class="content">
+                <header class="heading">
+                    <h2><a href="/users/<%= userDetails[i].uid %>"> Showing <%= userDetails[i].username %>
+                        </a>
+                    </h2>
+                </header>
+
+                <div class="UID">
+                    <div id="UID">
+                        UID
+                    </div>
+                    <div>
+                        <%= userDetails[i].uid %>
+                    </div>
+                </div>
+                <div class="username">
+                    <div id="username">
+                        User Name
+                    </div>
+                    <div>
+                        <%= userDetails[i].username %>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <%- include ('partials/credentials') %>
+    </div>
+</body>
+
+</html>

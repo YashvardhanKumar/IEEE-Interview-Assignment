@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New User</title>
+    <link rel="stylesheet" href="/mainstyles.css">
+    <style>
+        body {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+        }
+
+        .footer {
+            border-radius: 0px !important;
+
+        }
+    </style>
+</head>
+
+<body>
+    <%- include ('partials/navbar.ejs') %> 
+    <div class="container">
+        <div class="heading">Add User Name</div>
+        <form action="/users" method="POST">
+            <!-- <input class="name" type="name" placeholder="Enter the user ID" name="uid" autocomplete="off" required> -->
+            <input class="name" type="name" placeholder="Enter the username" name="username" autocomplete="off"
+                required>
+            <button class="submit">Add User</button>
+        </form>
+    </div>
+    <%- include ('partials/credentials') %>
+</body>
+
+</html>

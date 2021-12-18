@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainstyles.css">
+    <title>New Meeting</title>
+    <style>
+                body {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+        }
+
+        .footer {
+            border-radius: 0px !important;
+
+        }
+        </style>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %> 
+    <div class="container">
+        <div class="heading">Add People for meeting</div>
+        <form action="/meetings" method="POST">
+            <!-- <input class="name" type="name" placeholder="Enter the username" name="username" autocomplete="off" required> -->
+            <select class="name" name="uid1" id="uid1" required>
+                <% for( let i = 0; i < user.length; i++ ) { %>
+                    <option value="<%= user[i]._id %>"><%= user[i].username %></option>
+                <% } %>
+            </select>
+            <select class="name" name="uid2" id="uid2" required>
+                <% for( let i = 0; i < user.length; i++ ) { %>
+                    <option value="<%= user[i]._id %>"><%= user[i].username %></option>
+                <% } %>
+            </select>
+            <input class="name" type="date" name="date" id="date">
+            <button class="submit">Add User</button>
+        </form> 
+    </div>
+<%- include ('partials/credentials') %> 
+
+</body>
+</html>
