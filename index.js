@@ -38,16 +38,16 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-router.post("/users", async (req, res, next) => {
+app.post("/users", async (req, res, next) => {
   const user = new Users(req.body);
   await user.save()
   res.redirect(`/users/${user._id}`);
 });
-router.get("/users/new", (req, res) => {
+app.get("/users/new", (req, res) => {
   res.render("newUser");
 });
 
-router.get("/users/all", async (req, res) => {
+app.get("/users/all", async (req, res) => {
     let userDetails = [];
     const users = await Users.find({});
     for (let i = 0; i < users.length; i++) {
@@ -62,7 +62,7 @@ router.get("/users/all", async (req, res) => {
     res.render("showUser", { userDetails });
   });
 
-router.get("/users/:id", async (req, res) => {
+app.get("/users/:id", async (req, res) => {
   const { id } = req.params;
   const user = await Users.findById(id);
   let userDetails = [];
@@ -75,19 +75,19 @@ router.get("/users/:id", async (req, res) => {
 });
 
 
-router.post("/meetings", async (req, res) => {
+app.post("/meetings", async (req, res) => {
   const meeting = new Meetings(req.body);
   await meeting.save();
   res.redirect(`/meetings/${meeting._id}`);
 });
 
-router.get("/meetings/new", async (req, res) => {
+app.get("/meetings/new", async (req, res) => {
   const user = await Users.find({});
   console.log(user);
   res.render("newMeeting", { user });
 });
 
-router.get("/meetings/all", async (req, res) => {
+app.get("/meetings/all", async (req, res) => {
   const meetings = await Meetings.find({});
   let meetDetails = [];
   for (let i = 0; i < meetings.length; i++) {
@@ -119,7 +119,7 @@ router.get("/meetings/all", async (req, res) => {
   }
 });
 
-router.get("/meetings/:id", async (req, res) => {
+app.get("/meetings/:id", async (req, res) => {
   const { id } = req.params;
   const meeting = await Meetings.findById(id);
   if (!meeting){
