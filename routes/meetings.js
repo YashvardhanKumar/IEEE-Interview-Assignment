@@ -1,10 +1,9 @@
 const express = require('express');
 const { route } = require('express/lib/router');
 const router = express.Router();
-const catchAsync = require('../utilis/catchAsync');
+const {catchAsync} = require('../utilis/catchAsync');
 
 const {createUser, renderNewUserForm, showAllUsers, showUser,createMeeting,renderMeetingForm,showAllMeetings,showMeeting} = require('../controllers/datacontroller')
-router.route('/users').post(catchAsync())
 
 router.route('/').post(catchAsync(createMeeting))
 router.route('/new').get(catchAsync(renderMeetingForm))

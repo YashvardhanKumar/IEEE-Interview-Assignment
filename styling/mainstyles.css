@@ -6,7 +6,6 @@
   box-sizing: border-box;
   user-select: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  transition: 0.3s ease-out;
 }
 
 /* nav {
@@ -55,6 +54,7 @@ body {
 
 .topnav a {
   float: left;
+  transition: 0.3s ease-out;
   border-right: 1px solid #ffffff21;
   display: block;
   color: #f2f2f2;
@@ -139,6 +139,7 @@ form {
   margin: 2vh !important;
   width: 90%;
   height: 90%;
+  transition: 0.3s ease-out;
   padding: 15px;
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(88, 243, 127, 0.63);
