@@ -9,7 +9,7 @@
     <title>Home Page</title>
 
     <style>
-        .heading{
+        .heading {
             margin: 10px;
         }
     </style>
@@ -17,20 +17,23 @@
 </head>
 
 <body>
-    <%- include ('partials/navbar.ejs') %> 
-    <div class="container">
-        <header class="heading">
-            <h2> IEEE Interview Assignment</h2>
-        </header>
-        <div class="heading">
-            <h2> Submitted To IEEE Seniors</h2>
+    <%- include ('partials/navbar.ejs') %>
+
+        <div class="container">
+            <header class="heading">
+                <h2> IEEE Interview Assignment</h2>
+            </header>
+            <div class="heading">
+                <h2> Submitted To IEEE Seniors</h2>
+            </div>
+            <div class="heading">
+                <h2> Showing Home Page</h2>
+            </div>
         </div>
-        <div class="heading">
-            <h2> Showing Home Page</h2>
-        </div>
-    </div>
-    
-    <%- include ('partials/credentials.ejs') %> 
+
+        <%- include ('partials/credentials.ejs') %>
 </body>
+<script src="/navbar.js"></script>
+
 
 </html>
