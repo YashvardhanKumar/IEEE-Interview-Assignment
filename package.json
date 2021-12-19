@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material/top-app-bar": "^13.0.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
@@ -30,6 +31,5 @@
     "url": "https://github.com/YashvardhanKumar/IEEE-Interview-Assignment/issues"
   },
   "homepage": "https://github.com/YashvardhanKumar/IEEE-Interview-Assignment#readme",
-  "devDependencies": {},
   "description": ""
 }
