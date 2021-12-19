@@ -114,7 +114,6 @@ body {
   }
 }
 
-
 .container {
   height: 100%;
   display: flex;
@@ -230,7 +229,7 @@ form {
   flex-direction: column;
 }
 
-.heading h2 a{
+.heading a{
   color: #fbf;
   text-decoration: none;
 }
