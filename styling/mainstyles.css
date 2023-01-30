@@ -6,37 +6,8 @@
   box-sizing: border-box;
   user-select: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  transition: 0.3s ease-out;
 }
 
-/* nav {
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-  background-color: #222;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-nav div {
-  display: flex;
-}
-
-nav div a {
-  color: crimson;
-  font-size: large;
-  text-decoration: none;
-  padding: 0.5em 0.5em;
-}
-
-nav div a:hover {
-  background-color: #ffffff21;
-}
-nav div a:active {
-  color: rgba(220, 20, 60, 41);
-
-  background-color: #ffffff91;
-} */
 
 body {
   margin: 0;
@@ -55,6 +26,7 @@ body {
 
 .topnav a {
   float: left;
+  transition: 0.3s ease-out;
   border-right: 1px solid #ffffff21;
   display: block;
   color: #f2f2f2;
@@ -139,6 +111,7 @@ form {
   margin: 2vh !important;
   width: 90%;
   height: 90%;
+  transition: 0.3s ease-out;
   padding: 15px;
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(88, 243, 127, 0.63);
